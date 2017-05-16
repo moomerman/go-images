@@ -6,4 +6,4 @@
 
 ## Building
 
-GOOS=linux GOARCH=amd64 go build -o go-images.linux
+    GOOS=linux GOARCH=amd64 go build -o go-images.linux
