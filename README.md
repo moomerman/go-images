@@ -1,6 +1,6 @@
-# Installation
+# Installation
 
-  go get github.com/moomerman/go-images
+    go get github.com/moomerman/go-images
 
 # Compiling for different platforms
 
