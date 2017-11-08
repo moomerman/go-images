@@ -1,9 +1,10 @@
 package application
 
 import (
-	"crypto"
-
-	"github.com/gosexy/checksum"
+	"crypto/sha256"
+	"encoding/hex"
+	"io"
+	"os"
 )
 
 // Round rounds a float to the nearest whole number
@@ -15,13 +16,19 @@ func Round(val float64) int {
 }
 
 // ComputeFileMd5 computes the hash of the given file contents
-func ComputeFileMd5(filename string) string {
-	return checksum.File(filename, crypto.SHA256)
-}
+func ComputeFileMd5(filename string) (string, error) {
+	f, err := os.Open(filename)
+	if err != nil {
+		return "", err
+	}
+	defer f.Close()
 
-// ComputeMd5 computes the has of the given string contents
-func ComputeMd5(string string) string {
-	return checksum.String(string, crypto.MD5)
+	h := sha256.New()
+	if _, err := io.Copy(h, f); err != nil {
+		return "", err
+	}
+
+	return hex.EncodeToString(h.Sum(nil)), nil
 }
 
 // ExtensionForFormat determines the best guess extension for the given

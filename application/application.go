@@ -106,7 +106,11 @@ func (app *Application) StoreFile(storage *Storage, file io.Reader, path string,
 
 	app.logger.Println("[StoreFile] temporary file", upload)
 
-	key := "upload/" + ComputeFileMd5(path) + upload.Extension
+	md5, err := ComputeFileMd5(path)
+	if err != nil {
+		return nil, err
+	}
+	key := "upload/" + md5 + upload.Extension
 	newFilename := storage.Root + key
 
 	os.MkdirAll(filepath.Dir(newFilename), 0777)
