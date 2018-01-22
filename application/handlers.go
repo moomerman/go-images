@@ -166,6 +166,10 @@ func (app *Application) URLHandler() http.Handler {
 
 		// fetch the image from the URL specified
 		response, err := http.Get(url)
+		if err != nil {
+			fmt.Fprintf(w, "Unable to fetch the url. Check it exists.")
+			return
+		}
 		defer response.Body.Close()
 		fmt.Println(response.Status)
 
