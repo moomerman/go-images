@@ -2,86 +2,129 @@
 
 
 [[projects]]
+  digest = "1:7b4b8c901568da024c49be7ff5e20fdecef629b60679c803041093823fb8d081"
   name = "github.com/djherbis/times"
   packages = ["."]
+  pruneopts = ""
   revision = "95292e44976d1217cf3611dc7c8d9466877d3ed5"
   version = "v1.0.1"
 
 [[projects]]
+  digest = "1:20ed7daa9b3b38b6d1d39b48ab3fd31122be5419461470d0c28de3e121c93ecf"
   name = "github.com/gorilla/context"
   packages = ["."]
+  pruneopts = ""
   revision = "1ea25387ff6f684839d82767c1733ff4d4d15d0a"
   version = "v1.1"
 
 [[projects]]
+  digest = "1:a1a1522a8c1fad5675ce8ec9de96f30b898df7c8c229928c35dbd8cf277e6d62"
   name = "github.com/gorilla/handlers"
   packages = ["."]
+  pruneopts = ""
   revision = "90663712d74cb411cbef281bc1e08c19d1a76145"
   version = "v1.3.0"
 
 [[projects]]
+  digest = "1:aa016bbb412f496a7baed9e02787a60cd15c9a3edfa72da9c4a95d6cea610334"
   name = "github.com/gorilla/mux"
   packages = ["."]
+  pruneopts = ""
   revision = "53c1911da2b537f792e7cafcb446b05ffe33b996"
   version = "v1.6.1"
 
 [[projects]]
   branch = "master"
+  digest = "1:cd5a13ac83aa77fe9fdc097e13df76c19d46bdcb52af6cf02b167d7e1403d4b2"
   name = "github.com/mitchellh/goamz"
-  packages = ["aws","s3"]
+  packages = [
+    "aws",
+    "s3",
+  ]
+  pruneopts = ""
   revision = "caaaea8b30ee15616494ee68abd5d8ebbbef05cf"
 
 [[projects]]
+  digest = "1:bfc8db90e2676a2fc0d742a536f376044a9b74f2745b2c60d339eb06c6c6988a"
   name = "github.com/rs/cors"
   packages = ["."]
+  pruneopts = ""
   revision = "7af7a1e09ba336d2ea14b1ce73bf693c6837dbf6"
   version = "v1.2"
 
 [[projects]]
   branch = "master"
+  digest = "1:d34d935527a379653a63011d98ad696d5820c2e2a989bcceb95e3139b454026e"
   name = "github.com/thoas/gostorages"
   packages = ["."]
+  pruneopts = ""
   revision = "e2229fc2f445b6a607e1fa0a1fe2d0f7cad8a97c"
 
 [[projects]]
   branch = "master"
+  digest = "1:d8e545527ef42624f02bb02ba55e0ac585263efc468a26348c3dc37caffd45cd"
   name = "github.com/thoas/stats"
   packages = ["."]
+  pruneopts = ""
   revision = "37829025d2242afb04d91572cb143e00019e2aac"
 
 [[projects]]
   branch = "master"
+  digest = "1:5b73c9a49a98d2686d169009620630709232b957a4bfd60458cf2b6e1dff591b"
   name = "github.com/vaughan0/go-ini"
   packages = ["."]
+  pruneopts = ""
   revision = "a98ad7ee00ec53921f08832bc06ecf7fd600e6a1"
 
 [[projects]]
+  digest = "1:fa565368b1ccf94adc18bbcfa553a6451a0828a711bbd90b1df33825a07cec02"
   name = "gopkg.in/h2non/filetype.v0"
   packages = ["."]
+  pruneopts = ""
   revision = "098c8d214a5ac605000f2a822fdc86793300cde6"
   version = "v0.1.0"
 
 [[projects]]
+  digest = "1:6ee50e0ace655f26787c120dbce51b3185c470f475c9e57d0dcada8ebb115004"
   name = "gopkg.in/h2non/filetype.v1"
-  packages = ["matchers","types"]
+  packages = [
+    "matchers",
+    "types",
+  ]
+  pruneopts = ""
   revision = "cc14fdc9ca0e4c2bafad7458f6ff79fd3947cfbb"
   version = "v1.0.5"
 
 [[projects]]
+  digest = "1:8143ea52154df4cf52589d780ad447f625978a4c29713200842ccaa7c532350a"
   name = "gopkg.in/tylerb/graceful.v1"
   packages = ["."]
+  pruneopts = ""
   revision = "4654dfbb6ad53cb5e27f37d99b02e16c1872fbbb"
   version = "v1.2.15"
 
 [[projects]]
   branch = "v2"
+  digest = "1:4b4e5848dfe7f316f95f754df071bebfb40cf4482da62e17e7e1aebdf11f4918"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
+  pruneopts = ""
   revision = "d670f9405373e636a5a2765eea47fac0c9bc91a4"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "64083ac22a74abefb476940b451435cf710c0b0936a49eb56bfc4a3949fbaacf"
+  input-imports = [
+    "github.com/gorilla/handlers",
+    "github.com/gorilla/mux",
+    "github.com/mitchellh/goamz/aws",
+    "github.com/mitchellh/goamz/s3",
+    "github.com/rs/cors",
+    "github.com/thoas/gostorages",
+    "github.com/thoas/stats",
+    "gopkg.in/h2non/filetype.v0",
+    "gopkg.in/tylerb/graceful.v1",
+    "gopkg.in/yaml.v2",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
